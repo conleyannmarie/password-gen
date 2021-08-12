@@ -9,18 +9,18 @@ var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 var writePassword = function() {
   
-  var lengthPass = parseInt(prompt("How long should you password be?"));
+  var lengthPass = parseInt(prompt("How long will your password be? (between 8 and 128)"));
   
   while (lengthPass < 7 || lengthPass > 129) {
-    alert("you messed up! do it again");
-    lengthPass = parseInt(prompt("How long should you password be?"));
+    alert("you messed up! do it again (between 8 and 128)");
+    lengthPass = parseInt(prompt("How long should your password be? (between 8 and 128)"));
   } 
   
   // Variables 
-  var confirmSpecialCharacter = confirm("Want special?");
-  var confirmNumber= confirm("Want Nums?");
-  var confirmUpperCase= confirm("Want uppers?");
-  var confirmLowerCase= confirm("Want lowers?");
+  var confirmSpecialCharacter = confirm("Include special characters?");
+  var confirmNumber= confirm("Include numbers?");
+  var confirmUpperCase= confirm("Include uppercase?");
+  var confirmLowerCase= confirm("Include lowercase?");
 
   var possibilities = "";
 
